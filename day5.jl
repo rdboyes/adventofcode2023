@@ -47,4 +47,4 @@ end
 minimum(map(x -> seed_to_location(x, rules), seeds.seed_number))
 
 minimum(map(x -> seed_to_location(x, rules),
-    [collect.([seeds.seed_number[i]:(seeds.seed_number[i] + seeds.seed_number[i+1]) for i in 1:2:19])...]))
+    vcat(collect.([seeds.seed_number[i]:(seeds.seed_number[i] + seeds.seed_number[i+1]) for i in 1:2:19])...)))
